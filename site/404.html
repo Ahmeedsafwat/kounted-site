@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <script>
+    // 404 can be served at any depth. Point relative URLs at the site root,
+    // which is /kounted-site/ on github.io and / on kounted.co.
+    (function () {
+      var b = document.createElement("base");
+      b.href = location.hostname.slice(-10) === "github.io" ? "/kounted-site/" : "/";
+      document.head.appendChild(b);
+    })();
+  </script>
+  <title>Page not found | Kounted</title>
+  <meta name="description" content="This page does not exist. Kounted is a done-for-you influencer campaign measurement service.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#f4f1ea">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="./" aria-label="Kounted home">
+        <img src="assets/logo.svg" alt="Kounted" width="124" height="21">
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a class="btn btn--sm" href="mailto:hello@kounted.co?subject=Free%20audit%20request">Free audit</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="nf" aria-labelledby="nf-title">
+      <div class="wrap">
+        <p class="label"><span style="color:var(--flag-text)">404</span> / Not found</p>
+        <h1 id="nf-title">This page was not counted.</h1>
+        <p class="lede">The link may be old, or the address may have a typo. Everything about Kounted is on the home page.</p>
+        <div class="cta-row">
+          <a class="btn" href="./">Go to the home page <span class="arrow" aria-hidden="true">&rarr;</span></a>
+          <a href="mailto:hello@kounted.co?subject=Free%20audit%20request">Or request a free audit</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <img src="assets/logo.svg" alt="Kounted" width="104" height="17">
+      <div class="foot-meta">
+        <p>Influencer campaign measurement, done for you.</p>
+        <p><a href="mailto:hello@kounted.co?subject=Free%20audit%20request">hello@kounted.co</a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

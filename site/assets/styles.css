@@ -323,6 +323,7 @@ a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.18e
 .sheet .up { color: var(--pos); }
 .sheet .flag { color: var(--flag-text); font-weight: 500; }
 .sheet .hide-sm, .sheet .hide-md { display: none; }
+.cap-saves { display: none; }
 .sheet tr.is-dupe td { color: var(--ink-2); }
 .sheet tr.is-dupe td:first-child { text-decoration: line-through; text-decoration-color: var(--flag); }
 .sheet .muted { color: var(--ink-2); }
@@ -383,9 +384,13 @@ a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.18e
 .vet-title { padding: 1rem 0 0.25rem; }
 .ledger--tight { border-top: 0; }
 .ledger--tight li:first-child { border-top: 0; }
+.ways { margin-top: clamp(2rem, 5vw, 3rem); }
 .shortlist { margin: clamp(2.5rem, 6vw, 4rem) 0 0; }
 @media (max-width: 63.99em) {
   .shortlist .sheet th { white-space: normal; vertical-align: bottom; }
+}
+@media (max-width: 37.49em) {
+  .sheet--wrap td:not(:first-child) { white-space: normal; }
 }
 @media (max-width: 37.49em) {
   .shortlist .sheet { font-size: 0.6875rem; }
@@ -393,6 +398,11 @@ a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.18e
   .shortlist .sheet th:first-child, .shortlist .sheet td:first-child { padding-left: 0.7rem; }
   .shortlist .sheet th:last-child, .shortlist .sheet td:last-child { padding-right: 0.7rem; }
   .shortlist .sheet th { white-space: normal; vertical-align: bottom; }
+}
+@media (max-width: 37.49em) {
+  .shortlist .sheet--wrap th, .shortlist .sheet--wrap td { padding-left: 0.25rem; padding-right: 0.25rem; vertical-align: top; }
+  .shortlist .sheet--wrap th:first-child, .shortlist .sheet--wrap td:first-child { padding-left: 0.6rem; }
+  .shortlist .sheet--wrap th:last-child, .shortlist .sheet--wrap td:last-child { padding-right: 0.6rem; }
 }
 .notes { display: grid; gap: 1rem; margin-top: clamp(2rem, 5vw, 3rem); }
 .notes .panel p:not(.panel-head) { color: var(--ink-2); font-size: 0.9375rem; }
@@ -633,6 +643,7 @@ a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.18e
 /* ---------- 600px and up ---------- */
 @media (min-width: 37.5em) {
   .sheet .hide-sm { display: table-cell; }
+  .cap-saves { display: inline; }
   .notes { grid-template-columns: 1fr 1fr; }
   .final-offers li { grid-template-columns: minmax(0, 1fr) auto; align-items: center; column-gap: 2rem; }
   .final-offers .btn { min-width: 15.5rem; justify-content: space-between; }
@@ -701,6 +712,7 @@ a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.18e
 
 @media (min-width: 64em) and (max-width: 79.99em) {
   .hero .sheet .hide-sm { display: none; }
+  .cap-saves { display: none; }
 }
 
 /* Accessibility preferences */
